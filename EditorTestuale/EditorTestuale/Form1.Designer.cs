@@ -50,6 +50,7 @@
             this.btnScelta.TabIndex = 2;
             this.btnScelta.Text = "Scegli il file";
             this.btnScelta.UseVisualStyleBackColor = true;
+            this.btnScelta.Click += new System.EventHandler(this.btnScelta_Click);
             // 
             // btnIndenta
             // 
