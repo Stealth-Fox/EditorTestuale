@@ -36,6 +36,7 @@
             // 
             // txtBEditor
             // 
+            this.txtBEditor.Enabled = false;
             this.txtBEditor.Location = new System.Drawing.Point(12, 12);
             this.txtBEditor.Multiline = true;
             this.txtBEditor.Name = "txtBEditor";
@@ -60,6 +61,7 @@
             this.btnIndenta.TabIndex = 3;
             this.btnIndenta.Text = "Indenta";
             this.btnIndenta.UseVisualStyleBackColor = true;
+            this.btnIndenta.Click += new System.EventHandler(this.btnIndenta_Click);
             // 
             // lblNomefile
             // 
