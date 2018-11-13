@@ -32,6 +32,7 @@
             this.btnScelta = new System.Windows.Forms.Button();
             this.btnIndenta = new System.Windows.Forms.Button();
             this.lblNomefile = new System.Windows.Forms.Label();
+            this.btnSalva = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBEditor
@@ -40,12 +41,13 @@
             this.txtBEditor.Location = new System.Drawing.Point(12, 12);
             this.txtBEditor.Multiline = true;
             this.txtBEditor.Name = "txtBEditor";
-            this.txtBEditor.Size = new System.Drawing.Size(272, 200);
+            this.txtBEditor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtBEditor.Size = new System.Drawing.Size(324, 260);
             this.txtBEditor.TabIndex = 0;
             // 
             // btnScelta
             // 
-            this.btnScelta.Location = new System.Drawing.Point(12, 243);
+            this.btnScelta.Location = new System.Drawing.Point(12, 278);
             this.btnScelta.Name = "btnScelta";
             this.btnScelta.Size = new System.Drawing.Size(75, 23);
             this.btnScelta.TabIndex = 2;
@@ -55,7 +57,7 @@
             // 
             // btnIndenta
             // 
-            this.btnIndenta.Location = new System.Drawing.Point(304, 12);
+            this.btnIndenta.Location = new System.Drawing.Point(342, 12);
             this.btnIndenta.Name = "btnIndenta";
             this.btnIndenta.Size = new System.Drawing.Size(75, 23);
             this.btnIndenta.TabIndex = 3;
@@ -66,20 +68,32 @@
             // lblNomefile
             // 
             this.lblNomefile.AutoSize = true;
-            this.lblNomefile.Location = new System.Drawing.Point(93, 248);
+            this.lblNomefile.Location = new System.Drawing.Point(93, 283);
             this.lblNomefile.Name = "lblNomefile";
-            this.lblNomefile.Size = new System.Drawing.Size(0, 13);
+            this.lblNomefile.Size = new System.Drawing.Size(77, 13);
             this.lblNomefile.TabIndex = 4;
+            this.lblNomefile.Text = "Label percorso";
+            // 
+            // btnSalva
+            // 
+            this.btnSalva.Location = new System.Drawing.Point(12, 317);
+            this.btnSalva.Name = "btnSalva";
+            this.btnSalva.Size = new System.Drawing.Size(75, 23);
+            this.btnSalva.TabIndex = 5;
+            this.btnSalva.Text = "Salva";
+            this.btnSalva.UseVisualStyleBackColor = true;
             // 
             // EditorTestuale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 278);
+            this.ClientSize = new System.Drawing.Size(432, 352);
+            this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.lblNomefile);
             this.Controls.Add(this.btnIndenta);
             this.Controls.Add(this.btnScelta);
             this.Controls.Add(this.txtBEditor);
+            this.MaximizeBox = false;
             this.Name = "EditorTestuale";
             this.Text = "Editor Testuale";
             this.ResumeLayout(false);
@@ -93,6 +107,7 @@
         private System.Windows.Forms.Button btnScelta;
         private System.Windows.Forms.Button btnIndenta;
         private System.Windows.Forms.Label lblNomefile;
+        private System.Windows.Forms.Button btnSalva;
     }
 }
 
