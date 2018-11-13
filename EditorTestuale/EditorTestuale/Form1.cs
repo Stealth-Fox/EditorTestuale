@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.CodeAnalysis.CSharp;
 
 namespace EditorTestuale
 {
@@ -16,5 +10,13 @@ namespace EditorTestuale
         {
             InitializeComponent();
         }
+
+
+        #region Business Logic
+        public String indentaCSharp(String text)
+        {
+           return CSharpSyntaxTree.ParseText(text).GetRoot().ToFullString();
+        }
+        #endregion
     }
 }
