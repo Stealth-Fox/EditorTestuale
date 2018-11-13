@@ -4,9 +4,9 @@ using Microsoft.CodeAnalysis.CSharp;
 
 namespace EditorTestuale
 {
-    public partial class Form1 : Form
+    public partial class EditorTestuale : Form
     {
-        public Form1()
+        public EditorTestuale()
         {
             InitializeComponent();
         }
