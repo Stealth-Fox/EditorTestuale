@@ -37,6 +37,7 @@
             // 
             // txtBEditor
             // 
+            this.txtBEditor.BackColor = System.Drawing.SystemColors.Window;
             this.txtBEditor.Enabled = false;
             this.txtBEditor.Location = new System.Drawing.Point(12, 12);
             this.txtBEditor.Multiline = true;
@@ -47,6 +48,7 @@
             // 
             // btnScelta
             // 
+            this.btnScelta.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnScelta.Location = new System.Drawing.Point(12, 278);
             this.btnScelta.Name = "btnScelta";
             this.btnScelta.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +59,7 @@
             // 
             // btnIndenta
             // 
+            this.btnIndenta.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnIndenta.Location = new System.Drawing.Point(342, 12);
             this.btnIndenta.Name = "btnIndenta";
             this.btnIndenta.Size = new System.Drawing.Size(75, 23);
@@ -68,6 +71,7 @@
             // lblNomefile
             // 
             this.lblNomefile.AutoSize = true;
+            this.lblNomefile.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblNomefile.Location = new System.Drawing.Point(93, 283);
             this.lblNomefile.Name = "lblNomefile";
             this.lblNomefile.Size = new System.Drawing.Size(77, 13);
@@ -76,6 +80,7 @@
             // 
             // btnSalva
             // 
+            this.btnSalva.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSalva.Location = new System.Drawing.Point(12, 317);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(75, 23);
@@ -87,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(432, 352);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.lblNomefile);
@@ -95,6 +101,7 @@
             this.Controls.Add(this.txtBEditor);
             this.MaximizeBox = false;
             this.Name = "EditorTestuale";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Editor Testuale";
             this.ResumeLayout(false);
             this.PerformLayout();
