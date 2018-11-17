@@ -38,7 +38,6 @@
             // txtBEditor
             // 
             this.txtBEditor.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBEditor.Enabled = false;
             this.txtBEditor.Location = new System.Drawing.Point(12, 12);
             this.txtBEditor.Multiline = true;
             this.txtBEditor.Name = "txtBEditor";
@@ -87,6 +86,7 @@
             this.btnSalva.TabIndex = 5;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
+            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
             // 
             // EditorTestuale
             // 

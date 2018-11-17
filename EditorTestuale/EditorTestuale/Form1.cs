@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using Microsoft.CodeAnalysis.CSharp;
+using System.Text;
 
 namespace EditorTestuale
 {
@@ -39,8 +41,21 @@ namespace EditorTestuale
         #region Business Logic
         public String indentaCSharp(String text)
         {
-           return CSharpSyntaxTree.ParseText(text).GetRoot().ToFullString();
+            return CSharpSyntaxTree.ParseText(text).GetRoot().ToFullString();
         }
         #endregion
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "File di testo|*.txt";
+            saveFileDialog1.Title = "Salva file di testo";
+            saveFileDialog1.ShowDialog();
+            saveFileDialog1.InitialDirectory = "C:\\Desktop";
+            if (saveFileDialog1.FileName != "")
+            {  
+                System.IO.FileStream fs = (System.IO.FileStream)saveFileDialog1.OpenFile();  
+            }     
+        }
     }
 }
