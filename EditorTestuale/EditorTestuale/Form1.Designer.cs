@@ -38,6 +38,7 @@
             // txtBEditor
             // 
             this.txtBEditor.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBEditor.Enabled = false;
             this.txtBEditor.Location = new System.Drawing.Point(12, 12);
             this.txtBEditor.Multiline = true;
             this.txtBEditor.Name = "txtBEditor";
@@ -54,7 +55,7 @@
             this.btnScelta.TabIndex = 2;
             this.btnScelta.Text = "Scegli il file";
             this.btnScelta.UseVisualStyleBackColor = true;
-            this.btnScelta.Click += new System.EventHandler(this.btnScelta_Click);
+            this.btnScelta.Click += new System.EventHandler(this.BtnScelta_Click);
             // 
             // btnIndenta
             // 
@@ -65,7 +66,7 @@
             this.btnIndenta.TabIndex = 3;
             this.btnIndenta.Text = "Indenta";
             this.btnIndenta.UseVisualStyleBackColor = true;
-            this.btnIndenta.Click += new System.EventHandler(this.btnIndenta_Click);
+            this.btnIndenta.Click += new System.EventHandler(this.BtnIndenta_Click);
             // 
             // lblNomefile
             // 
@@ -73,9 +74,9 @@
             this.lblNomefile.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblNomefile.Location = new System.Drawing.Point(93, 283);
             this.lblNomefile.Name = "lblNomefile";
-            this.lblNomefile.Size = new System.Drawing.Size(77, 13);
+            this.lblNomefile.Size = new System.Drawing.Size(65, 13);
             this.lblNomefile.TabIndex = 4;
-            this.lblNomefile.Text = "Label percorso";
+            this.lblNomefile.Text = "Percorso file";
             // 
             // btnSalva
             // 
@@ -86,7 +87,7 @@
             this.btnSalva.TabIndex = 5;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
-            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
+            this.btnSalva.Click += new System.EventHandler(this.BtnSalva_Click);
             // 
             // EditorTestuale
             // 
@@ -99,9 +100,11 @@
             this.Controls.Add(this.btnIndenta);
             this.Controls.Add(this.btnScelta);
             this.Controls.Add(this.txtBEditor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "EditorTestuale";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor Testuale";
             this.ResumeLayout(false);
             this.PerformLayout();
