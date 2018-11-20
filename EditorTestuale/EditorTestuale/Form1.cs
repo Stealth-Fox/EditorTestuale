@@ -14,22 +14,27 @@ namespace EditorTestuale
         }
 
         #region  Events Management
-     
-        private void BtnIndenta_Click(object sender, EventArgs e)
+
+        private void indentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtBEditor.Text = IndentaCSharp(txtBEditor.Text);
         }
 
-        private void BtnScelta_Click(object sender, EventArgs e)
+        private void apriToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtBEditor.Text = ReadCSFile();
             txtBEditor.Enabled = true;
             lblNomefile.Text = "Percorso file: " + _currentFilePath;
         }
 
-        private void BtnSalva_Click(object sender, EventArgs e)
+        private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileInPath();
+        }
+
+        private void numeraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
