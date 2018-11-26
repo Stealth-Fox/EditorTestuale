@@ -28,44 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBEditor = new System.Windows.Forms.TextBox();
-            this.lblNomefile = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorTestuale));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.strumentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.numeraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LineNumberTextBox = new System.Windows.Forms.RichTextBox();
+            this.txtBEditor = new System.Windows.Forms.RichTextBox();
+            this.lblNomefile = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtBEditor
-            // 
-            this.txtBEditor.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBEditor.Enabled = false;
-            this.txtBEditor.Location = new System.Drawing.Point(12, 48);
-            this.txtBEditor.Multiline = true;
-            this.txtBEditor.Name = "txtBEditor";
-            this.txtBEditor.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtBEditor.Size = new System.Drawing.Size(408, 279);
-            this.txtBEditor.TabIndex = 0;
-            // 
-            // lblNomefile
-            // 
-            this.lblNomefile.AutoSize = true;
-            this.lblNomefile.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblNomefile.Location = new System.Drawing.Point(12, 330);
-            this.lblNomefile.Name = "lblNomefile";
-            this.lblNomefile.Size = new System.Drawing.Size(65, 13);
-            this.lblNomefile.TabIndex = 4;
-            this.lblNomefile.Text = "Percorso file";
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.strumentiToolStripMenuItem});
+            this.indentaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(432, 24);
@@ -84,39 +63,63 @@
             // apriToolStripMenuItem
             // 
             this.apriToolStripMenuItem.Name = "apriToolStripMenuItem";
-            this.apriToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.apriToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.apriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.apriToolStripMenuItem.Text = "Apri";
             this.apriToolStripMenuItem.Click += new System.EventHandler(this.apriToolStripMenuItem_Click);
             // 
             // salvaToolStripMenuItem
             // 
             this.salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salvaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.salvaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvaToolStripMenuItem.Text = "Salva";
             this.salvaToolStripMenuItem.Click += new System.EventHandler(this.salvaToolStripMenuItem_Click);
-            // 
-            // strumentiToolStripMenuItem
-            // 
-            this.strumentiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.indentaToolStripMenuItem,
-            this.numeraToolStripMenuItem});
-            this.strumentiToolStripMenuItem.Name = "strumentiToolStripMenuItem";
-            this.strumentiToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.strumentiToolStripMenuItem.Text = "Strumenti";
             // 
             // indentaToolStripMenuItem
             // 
             this.indentaToolStripMenuItem.Name = "indentaToolStripMenuItem";
-            this.indentaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.indentaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.indentaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.indentaToolStripMenuItem.Text = "Indenta";
             this.indentaToolStripMenuItem.Click += new System.EventHandler(this.indentaToolStripMenuItem_Click);
             // 
-            // numeraToolStripMenuItem
+            // LineNumberTextBox
             // 
-            this.numeraToolStripMenuItem.Name = "numeraToolStripMenuItem";
-            this.numeraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.numeraToolStripMenuItem.Text = "Numera";
-            this.numeraToolStripMenuItem.Click += new System.EventHandler(this.numeraToolStripMenuItem_Click);
+            this.LineNumberTextBox.BackColor = System.Drawing.Color.White;
+            this.LineNumberTextBox.Cursor = System.Windows.Forms.Cursors.PanNE;
+            this.LineNumberTextBox.ForeColor = System.Drawing.Color.Black;
+            this.LineNumberTextBox.Location = new System.Drawing.Point(12, 48);
+            this.LineNumberTextBox.Name = "LineNumberTextBox";
+            this.LineNumberTextBox.ReadOnly = true;
+            this.LineNumberTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LineNumberTextBox.Size = new System.Drawing.Size(25, 279);
+            this.LineNumberTextBox.TabIndex = 6;
+            this.LineNumberTextBox.Text = "";
+            this.LineNumberTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LineNumberTextBox_MouseDown);
+            // 
+            // txtBEditor
+            // 
+            this.txtBEditor.Enabled = false;
+            this.txtBEditor.Location = new System.Drawing.Point(43, 48);
+            this.txtBEditor.Name = "txtBEditor";
+            this.txtBEditor.Size = new System.Drawing.Size(377, 279);
+            this.txtBEditor.TabIndex = 7;
+            this.txtBEditor.Text = "";
+            this.txtBEditor.SelectionChanged += new System.EventHandler(this.txtBEditor_SelectionChanged);
+            this.txtBEditor.VScroll += new System.EventHandler(this.txtBEditor_VScroll);
+            this.txtBEditor.FontChanged += new System.EventHandler(this.txtBEditor_FontChanged);
+            this.txtBEditor.TextChanged += new System.EventHandler(this.txtBEditor_TextChanged);
+            // 
+            // lblNomefile
+            // 
+            this.lblNomefile.AutoSize = true;
+            this.lblNomefile.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblNomefile.Location = new System.Drawing.Point(12, 330);
+            this.lblNomefile.Name = "lblNomefile";
+            this.lblNomefile.Size = new System.Drawing.Size(65, 13);
+            this.lblNomefile.TabIndex = 4;
+            this.lblNomefile.Text = "Percorso file";
             // 
             // EditorTestuale
             // 
@@ -124,16 +127,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(432, 352);
-            this.Controls.Add(this.lblNomefile);
             this.Controls.Add(this.txtBEditor);
+            this.Controls.Add(this.LineNumberTextBox);
+            this.Controls.Add(this.lblNomefile);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "EditorTestuale";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor Testuale";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -142,16 +149,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtBEditor;
-        private System.Windows.Forms.Label lblNomefile;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem apriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem strumentiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem numeraToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox LineNumberTextBox;
+        private System.Windows.Forms.RichTextBox txtBEditor;
+        private System.Windows.Forms.Label lblNomefile;
     }
 }
 
